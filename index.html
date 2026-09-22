@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casework — Type Studio</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Space+Grotesk:wght@300..700&family=Josefin+Sans:wght@100..700&family=IBM+Plex+Mono:wght@100..700&family=Playfair+Display:wght@400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    --bg:#0d0f14; --panel:#14171f; --panel-edge:#232732;
+    --blue:#3f6fa8; --blue2:#5c7f9e; --steel:#7c8698;
+    --ink:#e7eaf0; --ink-soft:#727c8c; --line:#252a35;
+    --font-ui:'Space Grotesk', system-ui, sans-serif;
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px); height:100%;}
+  *{box-sizing:border-box;}
+  body{
+    margin:0; min-height:100%; background:var(--bg); color:var(--ink);
+    font-family:var(--font-ui); display:flex; flex-direction:column;
+  }
+  header{
+    padding:22px 30px; border-bottom:4px double var(--blue2);
+    display:flex; align-items:baseline; gap:16px; flex-wrap:wrap;
+  }
+  header h1{
+    margin:0; font-family:'Playfair Display', serif; font-weight:800;
+    font-size:1.5rem; letter-spacing:.02em; color:var(--ink);
+  }
+  header span{
+    color:var(--ink-soft); font-size:.72rem; text-transform:uppercase;
+    letter-spacing:.24em;
+  }
+  .app{display:flex; flex:1; flex-wrap:wrap;}
+
+  .stage{
+    flex:3 1 480px; min-width:320px; position:relative;
+    padding:40px; display:flex; align-items:stretch;
+    border-right:1px solid var(--line);
+  }
+  .rail-frame{ position:relative; flex:1; display:flex; }
+  .rail-frame::before, .rail-frame::after{
+    content:''; position:absolute; inset:8px; pointer-events:none; z-index:2;
+  }
+  .rail-frame::before{ inset:8px; border:1px solid rgba(231,234,240,.6); }
+  .rail-frame::after{ inset:13px; border:1px solid rgba(92,127,158,.35); }
+  .rail-d{
+    position:absolute; width:10px; height:10px; z-index:3;
+    background:var(--blue); border:2px solid var(--bg);
+    transform:translate(-50%,-50%) rotate(45deg);
+    box-shadow:0 0 0 1px rgba(231,234,240,.5);
+  }
+  .rail-d.tl{top:8px; left:8px;} .rail-d.tr{top:8px; left:calc(100% - 8px);}
+  .rail-d.bl{top:calc(100% - 8px); left:8px;} .rail-d.br{top:calc(100% - 8px); left:calc(100% - 8px);}
+
+  #editor{
+    flex:1; margin:24px; outline:none; overflow:auto;
+    color:var(--ink); line-height:1.5; caret-color:var(--blue2);
+  }
+  #editor:empty:before{ content:attr(data-placeholder); color:var(--ink-soft); }
+
+  .side{
+    flex:1 1 300px; min-width:280px; padding:30px 28px;
+    display:flex; flex-direction:column; gap:24px; overflow:auto;
+  }
+  .group-title{
+    display:flex; align-items:center; gap:10px;
+    text-transform:uppercase; letter-spacing:.26em; font-size:.66rem;
+    color:var(--ink-soft); margin-bottom:12px;
+  }
+  .group-title::before{ content:''; width:6px; height:6px; background:var(--blue); transform:rotate(45deg); flex:none; }
+  .group-title::after{ content:''; flex:1; height:3px; border-top:1px solid var(--blue); border-bottom:1px solid var(--blue2); }
+
+  select, input[type=range]{ width:100%; }
+  select{
+    background:var(--panel); color:var(--ink); border:1px solid var(--line);
+    padding:9px 10px; font-family:var(--font-ui); font-size:.85rem;
+  }
+  .row{ display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .row .val{ color:var(--blue2); font-size:.72rem; font-variant-numeric:tabular-nums; }
+  input[type=range]{
+    -webkit-appearance:none; height:2px; background:var(--line); outline:none;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none; width:13px; height:13px; background:var(--blue);
+    border:2px solid var(--bg); box-shadow:0 0 0 1px var(--blue2); transform:rotate(45deg); cursor:pointer;
+  }
+  input[type=range]::-moz-range-thumb{
+    width:11px; height:11px; background:var(--blue); border:2px solid var(--bg);
+    box-shadow:0 0 0 1px var(--blue2); transform:rotate(45deg); cursor:pointer; border-radius:0;
+  }
+
+  .btn-grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  button.tool{
+    --c:var(--blue2);
+    border:1px solid var(--line); background:
+      linear-gradient(var(--c),var(--c)) top left/8px 1px no-repeat,
+      linear-gradient(var(--c),var(--c)) top left/1px 8px no-repeat,
+      linear-gradient(var(--c),var(--c)) top right/8px 1px no-repeat,
+      linear-gradient(var(--c),var(--c)) top right/1px 8px no-repeat,
+      linear-gradient(var(--c),var(--c)) bottom left/8px 1px no-repeat,
+      linear-gradient(var(--c),var(--c)) bottom left/1px 8px no-repeat,
+      linear-gradient(var(--c),var(--c)) bottom right/8px 1px no-repeat,
+      linear-gradient(var(--c),var(--c)) bottom right/1px 8px no-repeat,
+      var(--panel);
+    box-shadow:inset 0 0 0 3px var(--panel), inset 0 0 0 4px var(--panel-edge);
+    color:var(--ink); font-family:var(--font-ui); font-size:.72rem;
+    letter-spacing:.06em; padding:11px 8px; cursor:pointer;
+  }
+  button.tool:hover{ --c:#fff; }
+  button.tool.active{ --c:var(--blue); background-color:rgba(63,111,168,.18); color:#fff; }
+  button.reset{
+    grid-column:1 / -1; background:transparent; border:1px solid var(--line);
+    color:var(--ink-soft); font-size:.68rem; text-transform:uppercase;
+    letter-spacing:.2em; padding:10px; cursor:pointer;
+  }
+  button.reset:hover{ color:var(--ink); border-color:var(--blue2); }
+
+  @media (max-width:760px){
+    .stage{ border-right:none; border-bottom:1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Casework</h1>
+  <span>Font and text editor</span>
+</header>
+
+<div class="app">
+  <div class="stage">
+    <div class="rail-frame">
+      <div class="rail-d tl"></div><div class="rail-d tr"></div>
+      <div class="rail-d bl"></div><div class="rail-d br"></div>
+      <div id="editor" contenteditable="true" spellcheck="false"
+        data-placeholder="Start typing here…"
+        style="font-family:'Fraunces',serif; font-weight:500; font-size:26px; letter-spacing:0em;">The quick brown fox jumps over the lazy dog. Adjust the type on the right, then try the case buttons.</div>
+    </div>
+  </div>
+
+  <div class="side">
+    <div>
+      <div class="group-title">Typeface</div>
+      <select id="fontInput">
+        <option value="Fraunces">Fraunces</option>
+        <option value="Playfair Display">Playfair Display</option>
+        <option value="Space Grotesk">Space Grotesk</option>
+        <option value="Josefin Sans">Josefin Sans</option>
+        <option value="Inter">Inter</option>
+        <option value="IBM Plex Mono">IBM Plex Mono</option>
+        <option value="Roboto">Roboto</option>
+        <option value="Open Sans">Open Sans</option>
+        <option value="Lato">Lato</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="Poppins">Poppins</option>
+        <option value="Merriweather">Merriweather</option>
+        <option value="Nunito">Nunito</option>
+        <option value="Raleway">Raleway</option>
+        <option value="Oswald">Oswald</option>
+        <option value="Source Sans 3">Source Sans 3</option>
+        <option value="PT Serif">PT Serif</option>
+        <option value="Bebas Neue">Bebas Neue</option>
+        <option value="Crimson Text">Crimson Text</option>
+        <option value="DM Sans">DM Sans</option>
+        <option value="Cormorant Garamond">Cormorant Garamond</option>
+        <option value="Libre Baskerville">Libre Baskerville</option>
+        <option value="Work Sans">Work Sans</option>
+        <option value="EB Garamond">EB Garamond</option>
+        <option value="Archivo">Archivo</option>
+        <option value="Rubik">Rubik</option>
+        <option value="Karla">Karla</option>
+        <option value="Manrope">Manrope</option>
+        <option value="Spectral">Spectral</option>
+        <option value="Zilla Slab">Zilla Slab</option>
+        <option value="JetBrains Mono">JetBrains Mono</option>
+        <option value="Bitter">Bitter</option>
+        <option value="Barlow">Barlow</option>
+        <option value="Sora">Sora</option>
+        <option value="Cinzel">Cinzel</option>
+        <option value="Abril Fatface">Abril Fatface</option>
+        <option value="Caveat">Caveat</option>
+        <option value="Pacifico">Pacifico</option>
+        <option value="Great Vibes">Great Vibes</option>
+        <option value="Shrikhand">Shrikhand</option>
+        <option value="Bungee">Bungee</option>
+        <option value="Press Start 2P">Press Start 2P</option>
+        <option value="VT323">VT323</option>
+        <option value="Vollkorn">Vollkorn</option>
+        <option value="Cardo">Cardo</option>
+        <option value="Anton">Anton</option>
+        <option value="Fjalla One">Fjalla One</option>
+        <option value="Righteous">Righteous</option>
+        <option value="Comfortaa">Comfortaa</option>
+      </select>
+      <div id="fontStatus" style="font-size:.68rem; color:var(--ink-soft); margin-top:8px;">Fraunces</div>
+    </div>
+
+    <div>
+      <div class="group-title">Weight</div>
+      <div class="row"><span>100 – 900</span><span class="val" id="weightVal">500</span></div>
+      <input type="range" id="weightRange" min="100" max="900" step="50" value="500">
+    </div>
+
+    <div>
+      <div class="group-title">Size</div>
+      <div class="row"><span>px</span><span class="val" id="sizeVal">26</span></div>
+      <input type="range" id="sizeRange" min="12" max="120" step="1" value="26">
+    </div>
+
+    <div>
+      <div class="group-title">Letter spacing</div>
+      <div class="row"><span>em</span><span class="val" id="spaceVal">0.00</span></div>
+      <input type="range" id="spaceRange" min="-5" max="40" step="1" value="0">
+    </div>
+
+    <div>
+      <div class="group-title">Style</div>
+      <div class="btn-grid">
+        <button class="tool" id="btnItalic" style="font-style:italic;">Italic</button>
+        <button class="tool" id="btnUnderline" style="text-decoration:underline;">Underline</button>
+        <button class="tool" id="btnStrike" style="text-decoration:line-through;">Strikethrough</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="group-title">Case</div>
+      <div class="btn-grid">
+        <button class="tool" id="btnUpper">UPPERCASE</button>
+        <button class="tool" id="btnLower">lowercase</button>
+        <button class="tool" id="btnCap">Capitalized Case</button>
+        <button class="tool" id="btnTitle">Title Case</button>
+        <button class="tool" id="btnAlt">aLtErNaTiNg</button>
+        <button class="tool" id="btnAltInv">AlTeRnAtInG</button>
+        <button class="reset" id="btnReset">Reset text</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const editor = document.getElementById('editor');
+  const original = editor.textContent;
+
+  const fontInput = document.getElementById('fontInput');
+  const fontStatus = document.getElementById('fontStatus');
+  const loadedFonts = new Set();
+  const genericFallback = 'sans-serif';
+
+  function loadGoogleFont(name){
+    name = name.trim();
+    if(!name) return;
+    const family = name.replace(/\s+/g, '+');
+    const fallbackFamily = `'${name}', ${genericFallback}`;
+    if(loadedFonts.has(name)){
+      editor.style.fontFamily = fallbackFamily;
+      fontStatus.textContent = name;
+      return;
+    }
+    fontStatus.textContent = 'Loading ' + name + '…';
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `https://fonts.googleapis.com/css2?family=${family}:wght@100;200;300;400;500;600;700;800;900&display=swap`;
+    link.onload = () => {
+      loadedFonts.add(name);
+      editor.style.fontFamily = fallbackFamily;
+      fontStatus.textContent = name;
+    };
+    link.onerror = () => {
+      fontStatus.textContent = `"${name}" not found on Google Fonts`;
+    };
+    document.head.appendChild(link);
+  }
+  fontInput.addEventListener('change', e => loadGoogleFont(e.target.value));
+  loadGoogleFont(fontInput.value);
+  const weightRange = document.getElementById('weightRange');
+  const weightVal = document.getElementById('weightVal');
+  weightRange.addEventListener('input', e=>{
+    editor.style.fontWeight = e.target.value;
+    weightVal.textContent = e.target.value;
+  });
+  const sizeRange = document.getElementById('sizeRange');
+  const sizeVal = document.getElementById('sizeVal');
+  sizeRange.addEventListener('input', e=>{
+    editor.style.fontSize = e.target.value + 'px';
+    sizeVal.textContent = e.target.value;
+  });
+  const spaceRange = document.getElementById('spaceRange');
+  const spaceVal = document.getElementById('spaceVal');
+  spaceRange.addEventListener('input', e=>{
+    const em = (e.target.value/100).toFixed(2);
+    editor.style.letterSpacing = em + 'em';
+    spaceVal.textContent = em;
+  });
+
+  function ensureSelectionInEditor(){
+    const sel = window.getSelection();
+    const hasRangeInEditor = sel.rangeCount > 0 && editor.contains(sel.anchorNode) && !sel.isCollapsed;
+    if(!hasRangeInEditor){
+      // Nothing selected: apply the style to the whole editor content instead.
+      const range = document.createRange();
+      range.selectNodeContents(editor);
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+  }
+  function toggleStyle(command, btn){
+    editor.focus();
+    ensureSelectionInEditor();
+    document.execCommand(command, false, null);
+    syncStyleButtons();
+  }
+  function syncStyleButtons(){
+    document.getElementById('btnItalic').classList.toggle('active', document.queryCommandState('italic'));
+    document.getElementById('btnUnderline').classList.toggle('active', document.queryCommandState('underline'));
+    document.getElementById('btnStrike').classList.toggle('active', document.queryCommandState('strikeThrough'));
+  }
+  document.getElementById('btnItalic').addEventListener('click', ()=> toggleStyle('italic'));
+  document.getElementById('btnUnderline').addEventListener('click', ()=> toggleStyle('underline'));
+  document.getElementById('btnStrike').addEventListener('click', ()=> toggleStyle('strikeThrough'));
+  document.addEventListener('selectionchange', ()=>{
+    const sel = window.getSelection();
+    if(sel.rangeCount > 0 && editor.contains(sel.anchorNode)) syncStyleButtons();
+  });
+
+  function applyCase(fn){
+    const text = editor.innerText;
+    editor.innerText = fn(text);
+  }
+  document.getElementById('btnUpper').addEventListener('click', ()=> applyCase(s=>s.toUpperCase()));
+  document.getElementById('btnLower').addEventListener('click', ()=> applyCase(s=>s.toLowerCase()));
+  document.getElementById('btnCap').addEventListener('click', ()=> applyCase(s=>
+    s.replace(/\S+/g, w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+  ));
+  const MINOR_WORDS = new Set(['a','an','and','as','at','but','by','for','if','in','nor','of','on','or','so','the','to','up','yet','vs','via']);
+  document.getElementById('btnTitle').addEventListener('click', ()=> applyCase(s=>{
+    const words = s.split(/(\s+)/);
+    let wordIndex = -1;
+    const lastWordIdx = (()=>{ let n=-1; words.forEach((w,i)=>{ if(/\S/.test(w)) n=i; }); return n; })();
+    return words.map((w,i)=>{
+      if(!/\S/.test(w)) return w;
+      wordIndex++;
+      const lower = w.toLowerCase();
+      const bare = lower.replace(/^[^a-zA-Z]+|[^a-zA-Z]+$/g, '');
+      const isMinor = MINOR_WORDS.has(bare) && wordIndex !== 0 && i !== lastWordIdx;
+      if(isMinor) return lower;
+      return lower.replace(/[a-zA-Z]/, c => c.toUpperCase());
+    }).join('');
+  }));
+  function alternate(s, startUpper){
+    let out=''; let i=0;
+    for(const ch of s){
+      if(/[a-zA-Z]/.test(ch)){
+        const upperTurn = startUpper ? (i%2===0) : (i%2!==0);
+        out += upperTurn ? ch.toUpperCase() : ch.toLowerCase();
+        i++;
+      } else out += ch;
+    }
+    return out;
+  }
+  document.getElementById('btnAlt').addEventListener('click', ()=> applyCase(s => alternate(s, false)));
+  document.getElementById('btnAltInv').addEventListener('click', ()=> applyCase(s => alternate(s, true)));
+  document.getElementById('btnReset').addEventListener('click', ()=>{ editor.innerText = original; });
+</script>
+</body>
+</html>
